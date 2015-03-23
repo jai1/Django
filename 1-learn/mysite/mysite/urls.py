@@ -8,5 +8,5 @@ urlpatterns = patterns('',
     # blogs.urls Needs to be in quotes - ambiguous error message
 
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^blog/', include('blog.urls'))
+    url(r'^blog/', include('blog.urls')),
 )

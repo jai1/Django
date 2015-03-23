@@ -9,5 +9,10 @@ urlpatterns=patterns('',
                  url(r'^(?P<pk>\d+)$', DetailView.as_view (
                          	     model = Post,
 				     template_name="post.html")),
-
+                 url(r'^archives/$', ListView.as_view (
+                         queryset=Post.objects.all().order_by("-date"), #-date for reverse chrono order
+                         template_name="archives.html")),
+                 url(r'^latestnews/$', ListView.as_view (
+                         queryset=Post.objects.all().order_by("-date")[:5], #-date for reverse chrono order
+                         template_name="latestnews.html")),
 )

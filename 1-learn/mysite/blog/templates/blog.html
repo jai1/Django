@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% for post in object_list %}
-<h3><a href="/blog/{{ post.id }}">{{ post.title }}i</a></h3>
+<h3><a href="/blog/{{ post.id }}">{{ post.title }}</a></h3>
 <div class = "post_meta">
 	on {{ post.date }}
 </div>
