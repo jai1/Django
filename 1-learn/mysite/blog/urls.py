@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.views.generic import ListView, DetailView
 from blog.models import Post
-
+from blog import views
 urlpatterns=patterns('',
 		 url(r'^$', ListView.as_view (
                          queryset=Post.objects.all().order_by("-date")[:10], #-date for reverse chrono order
@@ -15,4 +15,5 @@ urlpatterns=patterns('',
                  url(r'^latestnews/$', ListView.as_view (
                          queryset=Post.objects.all().order_by("-date")[:5], #-date for reverse chrono order
                          template_name="latestnews.html")),
+		url(r'^sample_graph/$', views.graph, name="graph"),
 )
