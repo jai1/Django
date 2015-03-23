@@ -1,0 +1,5 @@
+http://webtech-training.blogspot.in/2014/06/learn-django-step-by-step.html
+Django 	- Web framework to build a complex website
+       	- HAs backend functionality for everything like blogs, templates etc 
+	- Competitors web2py 
+	- Most Popular
